@@ -19,9 +19,10 @@
 #define Fun         3
 #define Game        4
 #define Gameplus    5
+#define Colemak     6
 
 &mt {
-    quick-tap-ms = <100>;
+    quick-tap-ms = <150>;
     global-quick-tap;
     flavor = "tap-preferred";
     tapping-term-ms = <170>;
@@ -41,7 +42,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
+            quick-tap-ms = <150>;
             global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
@@ -109,6 +110,16 @@
         &kp L    &kp O         &kp Y         &kp K         &kp G     &kp F5         &kp F7         &trans  &trans  &kp F12
 &trans  &to 0    &trans        &trans        &trans        &trans    &trans         &trans         &trans  &trans  &kp F22          &kp LA(F4)
                                &kp J         &kp I         &kp M     &trans         &trans         &trans
+            >;
+        };
+
+        Colemak {
+            display-name = "Colemak";
+            bindings = <
+                &kp Q       &kp W       &kp F          &kp P         &kp G        &kp J    &kp L        &kp U        &kp Y       &kp ;
+                &hm LGUI A  &hm LALT R  &hm LCTRL S    &hm LSHIFT T  &kp D        &kp H    &hm RSHFT N  &hm RCTRL E  &hm RALT I  &hm RGUI O
+&lt 3 ESCAPE    &kp Z       &kp X       &kp C          &kp V         &kp B        &kp K    &kp M        &kp COMMA    &kp DOT     &kp SLASH           &kp APOSTROPHE
+                                      &mt LCTRL DEL  &lt 1 TAB     &kp SPACE    &kp RET  &lt 2 BSPC   &kp MINUS
             >;
         };
     };
