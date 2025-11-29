@@ -48,7 +48,14 @@
         };
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        layout {
+            bindings = <&tog 6>;
+            key-positions = <0 9 35 34>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -116,9 +123,9 @@
         Colemak {
             display-name = "Colemak";
             bindings = <
-                &kp Q       &kp W       &kp F          &kp P         &kp G        &kp J    &kp L        &kp U        &kp Y       &kp ;
-                &hm LGUI A  &hm LALT R  &hm LCTRL S    &hm LSHIFT T  &kp D        &kp H    &hm RSHFT N  &hm RCTRL E  &hm RALT I  &hm RGUI O
-&lt 3 ESCAPE    &kp Z       &kp X       &kp C          &kp V         &kp B        &kp K    &kp M        &kp COMMA    &kp DOT     &kp SLASH           &kp APOSTROPHE
+              &kp Q       &kp W       &kp F          &kp P         &kp G        &kp J    &kp L        &kp U        &kp Y       &kp
+              &hm LGUI A  &hm LALT R  &hm LCTRL S    &hm LSHIFT T  &kp D        &kp H    &hm RSHFT N  &hm RCTRL E  &hm RALT I  &hm RGUI O
+&lt 3 ESCAPE  &kp Z       &kp X       &kp C          &kp V         &kp B        &kp K    &kp M        &kp COMMA    &kp DOT     &kp SLASH   &kp APOSTROPHE
                                       &mt LCTRL DEL  &lt 1 TAB     &kp SPACE    &kp RET  &lt 2 BSPC   &kp MINUS
             >;
         };
